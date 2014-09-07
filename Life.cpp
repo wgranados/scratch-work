@@ -13,7 +13,7 @@ bool valid(int i, int j){
     return (i >= 0 && j >= 0 && i < 20 && j < 20) ? true:false;
 }
 void input(){
-    printf("Input the (x,y) coodinates that contain live cells.\n");
+    printf("Input the (x,y) coordinates that contain live cells.\n");
     printf("Once complete input the coordinates (-1,-1).\n");
     memset(g,'O',sizeof g);
     while(scanf("%d%d",&x,&y) && !(x == -1 && y == -1)){
