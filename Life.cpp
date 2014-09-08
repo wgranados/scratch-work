@@ -1,3 +1,15 @@
+/*
+The Game of Life was devised by mathematician John Conway in 1970.
+It models a very simple world. The Life world is a two-dimensional plane of cells.
++Each cell may be empty or contain a single creature.
+Each day, creatures are born or die in each cell according to the number of neighboring creatures on the previous day.
+A neighbor is a cell that adjoins the cell either horizontally, vertically, or diagonally. 
+The rules in pseudocode style are:
+
+Create a Life application that has a 20 x 20 grid.
+To initialize the grid, the application should prompt the user for the coordinates of live cells on the first day.
+The application should then generate each day’s world as long as the user wishes to continue or until there are no more live cells.
+*/
 #include <iostream>
 #include <stdio.h>
 #include <string.h>
