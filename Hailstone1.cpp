@@ -1,3 +1,15 @@
+/**
+An interesting (yet unsolved) question in mathematics is called “hailstone numbers.” 
+This series is produced by taking an initial integer, and if the number is even, dividing it by 2.
+If the number is odd, multiply it by 3 and add 1.
+This process is then repeated. For example, an initial number of 10 produces:
+10, 5, 16, 8, 4, 2, 1, 4, 2, 1 ... An initial value of 23 produces:
+23, 70, 35, 106, 53, 160, 80, 40, 20, 10, 5, 16, 8, 4, 2, 1, 4, 2, 1 ...
+Note that both numbers eventually reach the 4, 2, 1, 4, 2, 1 ... cycle.
+Create two applications (Hailstone1 and Hailstone2) that answer the following questions for initial values of 1 to 200:
+a)  Do all integers from 1 to 200 eventually reach this cycle?
+*/
+
 /** If this program reaches an infinite loop
     then that means that the numbers reach another
     cycle that is not the cycle 4-2-1, however since
