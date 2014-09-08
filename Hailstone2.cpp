@@ -1,3 +1,14 @@
+/*
+An interesting (yet unsolved) question in mathematics is called “hailstone numbers.” 
+This series is produced by taking an initial integer, and if the number is even, dividing it by 2.
+If the number is odd, multiply it by 3 and add 1.
+This process is then repeated. For example, an initial number of 10 produces:
+10, 5, 16, 8, 4, 2, 1, 4, 2, 1 ... An initial value of 23 produces:
+23, 70, 35, 106, 53, 160, 80, 40, 20, 10, 5, 16, 8, 4, 2, 1, 4, 2, 1 ...
+Note that both numbers eventually reach the 4, 2, 1, 4, 2, 1 ... cycle.
+Create two applications (Hailstone1 and Hailstone2) that answer the following questions for initial values of 1 to 200:
+b)  What is the maximum number of iterations to reach the cycle and which starting number produces this maximum? 
+*/
 #include <iostream>
 #include <stdio.h>
 
