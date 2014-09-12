@@ -1,11 +1,3 @@
-/*
-  Substitutes the missing variable into the equation.
-  A sample testcase would be the following:
-  3
-  If the voltage is U=200V and the current is I=4.5A, which power is generated?
-  A light-bulb yields P=100W and the voltage is U=220V. Compute the current, please.
-  bla bla bla lightning strike I=2A bla bla bla P=2.5MW bla bla voltage?
-*/
 #include<iostream>
 #include<stdio.h>
 #include<stdlib.h>
@@ -45,31 +37,31 @@ int main(){
             if(in[i][0] == 'U'){
                 if( prefix( in[i][in[i].size()-2] ) == 1){
                     pre_u = 1.0;
-                    U = atof(in[i].substr(2,in[i].size()-2).c_str());
+                    U = atof(in[i].substr(2,in[i].size()-2-1).c_str());
                 }
                 else{
                     pre_u = prefix( in[i][in[i].size()-2] );
-                    U = atof(in[i].substr(2,in[i].size()-2).c_str());
+                    U = atof(in[i].substr(2,in[i].size()-2-2).c_str());
                 }
             }
             else if(in[i][0] == 'I'){
                 if( prefix( in[i][in[i].size()-2] ) == 1){
                     pre_i = 1.0;
-                    I = atof(in[i].substr(2,in[i].size()-2).c_str());
+                    I = atof(in[i].substr(2,in[i].size()-2-1).c_str());
                 }
                 else{
                     pre_i = prefix( in[i][in[i].size()-2] );
-                    I = atof(in[i].substr(2,in[i].size()-2).c_str());
+                    I = atof(in[i].substr(2,in[i].size()-2-2).c_str());
                 }
             }
             else if(in[i][0] == 'P'){
                 if( prefix( in[i][in[i].size()-2] ) == 1){
                     pre_p = 1.0;
-                    P = atof(in[i].substr(2,in[i].size()-2).c_str());
+                    P = atof(in[i].substr(2,in[i].size()-2-1).c_str());
                 }
                 else{
                     pre_p = prefix( in[i][in[i].size()-2] );
-                    P = atof(in[i].substr(2,in[i].size()-2).c_str());
+                    P = atof(in[i].substr(2,in[i].size()-2-2).c_str());
                 }
             }
         }
