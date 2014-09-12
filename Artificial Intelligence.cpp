@@ -37,7 +37,6 @@ double prefix(char c){
     return (c == 'm') ? pow(10,-3): ((c == 'k') ? pow(10,3): ((c == 'M') ? pow(10,6):1));
 }
 int main(){
-    freopen("input.txt","r",stdin);
     scanf("%d",&N);
     getline(cin,s);
     for(int t = 1;t <= N;t++){
