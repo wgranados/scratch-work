@@ -1,3 +1,4 @@
+/*Problem description: http://wcipeg.com/problems/desc/segtree*/
 #include<iostream>
 #include<cstdio>
 #include<vector>
