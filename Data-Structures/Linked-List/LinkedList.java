@@ -152,27 +152,63 @@ public class LinkedList< T extends Comparable<T> >{
 	 * @index specified index*/
 	public void delete(int index){
 		Node<T>current = this.head;
-		for(int i = 0; i < this.size;i++){
-			if(index == i){
-				current.before.next = current.next;
-				current.next.before = current.before;
-				return;
+		if(this.head != null && this.tail != null){
+			if(index == 0){
+				if(this.size == 1){
+					this.head = null;
+					this.tail = null;
+				}
+				else{
+					this.head = head.next;
+					this.head.before = null;
+				}
+				this.size--;
 			}
-			current = current.next;
+			else if(index == this.size-1){
+				if(this.size == 1){
+					this.head = null;
+					this.tail = null;
+				}
+				else{
+					this.tail = this.tail.before;
+					this.tail.next = null;
+				}
+				this.size--;
+			}else{
+				for(int i = 0; i < this.size;i++){
+					if(index == i){
+						current.before.next = current.next;
+						current.next.before = current.before;
+						this.size--;
+						return;
+					}
+					current = current.next;
+				}
+			}
 		}
 	}
 	/**Deletes all occurrences of the specified value
 	 * @value specified value to be deleted*/
 	public void deleteOccurences(Node<T>value){
-		Node<T>current = this.head;
-		for(int i = 0; i < this.size;i++){
-			if(current.value.compareTo(value.value) == 0){
-				current.before.next = current.next;
-				current.next.before = current.before;
-				this.size--;
-				i--;// we decrement the iterator to avoid skipping an element
+		if(this.head != null && this.tail != null){
+			// check for values that definitely do not have their next or before values as null, thus avoiding null pointer exceptions
+			Node<T>current = this.head.next;
+			for(int i = 1; i < this.size-1;i++){
+				if(current.value.compareTo(value.value) == 0){
+					current.before.next = current.next;
+					current.next.before = current.before;
+					this.size--;
+					i--;// we decrement the iterator to avoid skipping an element
+				}
+				current = current.next;
 			}
-			current = current.next;
+			// deletes the edge cases 
+			if(this.head.value.compareTo(value.value) == 0){
+				this.delete(0);
+			}
+			if(this.tail.value.compareTo(value.value) == 0){
+				this.delete(this.size-1);
+			}
 		}
 	}
 	/**Insert node in a sorted list in its correct place
