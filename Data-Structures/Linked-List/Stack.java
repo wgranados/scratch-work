@@ -1,11 +1,10 @@
 
 /** Name: William Granados
- *  Date: 30/11/14
+ *  Date: 07/12/14
  *  Purpose: Creates a stack data structure
  * */
 public class Stack<T extends Comparable<T>> extends LinkedList<T>{
 	
-	private int size;
 	private int MAX_SIZE;
 	private boolean CONDITIONAL_SIZE;
 	
@@ -26,22 +25,27 @@ public class Stack<T extends Comparable<T>> extends LinkedList<T>{
 	public void push(Node<T>node){
 		if(!this.CONDITIONAL_SIZE){
 			this.add(node);
-			this.size++;
 		}
 		else{
 			if(this.size + 1 <= this.MAX_SIZE){
 				this.add(node);
-				this.size++;
 			}
 		}
 	}
+	
+	/**Returns the node at the top of the stack
+	 * @return node at top of stack
+	 * @return null if stack is empty*/
+	public Node<T>top(){
+		return this.getTail();
+	}
+	
 	/**Pops a node from the top of a stack.
 	 * @return node at top stack
 	 * @return null if stack is empty*/
 	public Node<T> pop(){
 		Node<T>cur = this.getTail();
 		this.delete(this.size-1);
-		this.size--;
 		return cur;
 	}
 	/**Checks if the stack is empty*/
