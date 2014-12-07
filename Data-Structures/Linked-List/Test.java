@@ -63,7 +63,7 @@ public class Test {
 		System.out.println(in);
 		System.out.printf("This string is %s.\n", balanced ? "balanced":"not balanced");
 	}
-	/**Simple implementation of the lowest radix power radix sort*/
+	/**Simple implementation of the lowest power radix sort*/
 	public static void radix_sort(){
 		int highest_pow_10 = 1, N = 8;
 		int arr[] = {7125,21171,120,43859,73641,31975,51455,60433};
