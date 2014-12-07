@@ -1,12 +1,12 @@
 /** Name: William Granados
- *  Date: 19/11/14
+ *  Date: 07/12/14
  *  Purpose: Creates a generic linked list
  * */
 public class LinkedList< T extends Comparable<T> >{
 	
 	private Node<T> head;
 	private Node<T> tail;
-	private int size;
+	public int size;
 	
 	//----------------------------CONSTRUCTORS--------------------------------\\
 	
@@ -76,11 +76,6 @@ public class LinkedList< T extends Comparable<T> >{
 			this.tail.before = tail;
 			this.tail = tail;
 		}
-	}
-	/**Returns the current amount of elements in the linked list
-	 * @return number of elements*/
-	public int getSize(){
-		return this.size;
 	}
 
 	//------------------------------MUTATOR METHODS-----------------------------\\
