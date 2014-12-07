@@ -1,11 +1,10 @@
 
 /** Name: William Granados
- *  Date: 30/11/14
+ *  Date: 07/12/14
  *  Purpose: Creates a queue data structure
  * */
 public class Queue<T extends Comparable<T>> extends LinkedList<T>{
 	
-	private int size;
 	private int MAX_SIZE;
 	private boolean CONDITIONAL_SIZE;
 	
@@ -26,22 +25,25 @@ public class Queue<T extends Comparable<T>> extends LinkedList<T>{
 	public void push(Node<T>node){
 		if(!this.CONDITIONAL_SIZE){
 			this.add(node);
-			this.size++;
 		}
 		else{
 			if(this.size + 1 <= this.MAX_SIZE){
 				this.add(node);
-				this.size++;
 			}
 		}
+	}
+	/**Returns the the node at the front of the queue
+	 * @return node at front of queue
+	 * @return null if queue is empty*/
+	public Node<T> front(){
+		return this.get(0);
 	}
 	/**Pops a node from the front of the queue.
 	 * @return node at the front of the queue
 	 * @return null if queue is empty*/
 	public Node<T> pop(){
-		Node<T>cur = this.getTail();
+		Node<T>cur = this.getHead();
 		this.delete(0);
-		this.size--;
 		return cur;
 	}
 	/**Checks if the queue is empty*/
