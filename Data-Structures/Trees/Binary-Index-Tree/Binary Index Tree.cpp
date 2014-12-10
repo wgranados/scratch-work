@@ -1,60 +1,62 @@
+/**http://www.dmoj.ca/problem/ds1*/
 #include<iostream>
 #include<cstdio>
-#include<vector>
 #include<algorithm>
-#define MAXN (int)1e6
-#define lowbit(x)x&-x
+#define MAXN (int)1e6 +1
+#define lowbit(x) x&(-x)
 using namespace std;
 
-int N,M,arr[MAXN],bit[MAXN];
+int N,M,arr[MAXN];
+long long sumtree[MAXN];
+long long occtree[MAXN];
 
-void update(int x, int val){
-    for(int i = x; i <= MAXN;i+=lowbit(i))
-        bit[i]+=val;
+void inc_update(int x, int val){
+    for(int i = x;i <= MAXN;i+=lowbit(i))
+        sumtree[i]+=val;
+    for(int i = val; i <= MAXN;i+=lowbit(i))
+        occtree[i]++;
 }
-long long query(int x){
+void dec_update(int x, int val){
+    for(int i = x;i <= MAXN;i+=lowbit(i))
+        sumtree[i]-=val;
+    for(int i = val; i <= MAXN;i+=lowbit(i))
+        occtree[i]--;
+}
+long long query(int x,long long arr[]){
     long long sum = 0;
     for(int i = x; i > 0;i-=lowbit(i))
-        sum+=bit[i];
+        sum+=arr[i];
     return sum;
 }
-long long query(int x, int y){
-    return query(y)-query(x-1);
-}
-long long occur(int v){
-    long long cnt = 0;
-    for(int i = 1; i <= N;++i){
-        if(arr[i]<=v)++cnt;
-    }
-    return cnt;
+long long query_range(int x, int y,long long arr[]){
+    return query(y,arr) - query(x-1,arr);
 }
 int main(){
-    freopen("input.txt","r",stdin);
+    //freopen("input.txt","r",stdin);
     scanf("%d%d",&N,&M);
     for(int i = 1; i <= N;++i){
         scanf("%d",&arr[i]);
-        update(i,arr[i]);
+        inc_update(i,arr[i]);
     }
-    int a = 0,b = 0;char cmd;
+    char cmd;
+    int a,b;
     for(int i = 0; i < M;++i){
         scanf(" %c",&cmd);
         if(cmd == 'C'){
             scanf("%d%d",&a,&b);
-//            printf("%c %d %d\n",cmd,a,b);
-            arr[a] = b;
-            update(a,b);
+            dec_update(a,arr[a]);
+            inc_update(a,b);
+            arr[a]=b;
         }
-        else if(cmd == 'S'){
-            scanf(" %d%d",&a,&b);
-  //          printf("%c %d %d\n",cmd,a,b);
-            printf("%lld\n",query(a,b));
+        if(cmd == 'S'){
+            scanf("%d%d",&a,&b);
+            printf("%Ld\n",query_range(a,b,sumtree));
         }
-        else if(cmd == 'Q'){
+        if(cmd == 'Q'){
             scanf("%d",&a);
-    //        printf("%c %d\n",cmd,a);
-            printf("%lld\n",occur(a));
+            printf("%Ld\n",query(a,occtree));
         }
     }
-
     return 0;
 }
+
