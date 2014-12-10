@@ -5,5 +5,7 @@ public interface Queue {
 	
 	/**Return my front element
 	 * Requires.size() != 0*/
-	
+	Object head();
+	Object deque();
+	int size();
 }
