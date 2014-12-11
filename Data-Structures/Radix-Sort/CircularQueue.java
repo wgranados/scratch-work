@@ -12,7 +12,7 @@ public class CircularQueue implements Queue {
 
 	/** A CircularQueue with capacity of n elements */
 	public CircularQueue(int n) {
-		contents = new Queue[n];
+		contents = new Object[n];
 		tail = contents.length - 1;
 	}
 
