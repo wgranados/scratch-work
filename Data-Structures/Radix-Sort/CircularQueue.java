@@ -1,44 +1,50 @@
-/** A queue with fixed capacity and (except for creation)
- * constant-time operations */
-public class CircularQueue implements Queue {
+/** Name: William Granados
+ *  Date: 13/11/14
+ *  Purpose: Creates a queue data structure with a fixed capacity
+ *  		 Overall complexity of O(1) for push and pop functions
+ * */
 
-	/** The number of elements in me. */
-	private int size;
-	/** The index of the head and tail of the queue */
+public class CircularQueue implements Queue {
+	
+	
 	private int head, tail;
-	/** The items in me, stored in contents[head .. tail],
-	 * with wrap around */
+	private int size;
 	private Object[] contents;
 
-	/** A CircularQueue with capacity of n elements */
-	public CircularQueue(int n) {
-		contents = new Object[n];
+	/** Creates a circular queue of size N
+	 * @N maximum size of queue */
+	public CircularQueue(int N) {
+		contents = new Object[N];
 		tail = contents.length - 1;
 	}
 
-	/** Append o to me. */
-	public void enqueue(Object o){
+	/** Appends an object to end of queue size permitting
+	 * @value object to be appended on end of queue*/
+	public void enqueue(Object value){
+		// the position of the tail is incremented to become one based
+		// then the remainder is taken to get its relative position
 		tail = (tail+1) % contents.length;
-		contents[tail] = (Object)o;
+		contents[tail] = (Object)value;
 		size++;
 	}
-
-	/** Remove and return my front element.
-	 * Requires size() != 0 */
+	/** Returns an object from the front of the queue then pops it off the queue, size permitting.
+	 *  @return object object at front of queue
+	 *  @return null if queue is empty*/
 	public Object dequeue(){
 		Object result = contents[head];
 		head = (head+1)%contents.length;
 		size--;
 		return result;
 	}
-
-	/** Return my front element
-	 * Requires: size() != 0 */
+	/** Return the element from the front of the queue, size permitting
+	 *  @return object object at the front of the queue
+	 *  @return null if queue is empty */
 	public Object head(){
 		return contents[head];
 	}
 
-	/** Return the number of elements in me. */
+	/** Returns the number of elements present in the queue
+	 *  @return size number of elements in queue*/
 	public int size(){
 		return size;
 	}
