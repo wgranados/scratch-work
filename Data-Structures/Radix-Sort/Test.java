@@ -8,13 +8,13 @@ import java.util.ArrayList;
 
 public class Test {
 	public static void main(String[]args){
-		int arr[] = {-5,2,210,1,-50000,25,354,1,2};
-		radix_sort(arr,10000,true);
+		int arr[] = {10,-10,0};
+		radixSortIntegers(arr,10,true);
 	}
-	/**Implements Radix sort on the given array
+	/**Implements Radix sort on the given array that consists of integers
 	 * Complexity is O(N)*/
-	public static void radix_sort(int[] list, int maxPowerOf10, boolean trace){
-		int N = list.length;
+	public static void radixSortIntegers(int[] list, int maxPowerOf10, boolean trace){
+		int N = list.length, pass = 0;
 		ArrayList<CircularQueue> queue = new ArrayList<CircularQueue>();
 		
 		// Creates a list of queues where the 0th queue represents
@@ -22,7 +22,17 @@ public class Test {
 		for(int i = 0; i < 20;i++)
 			queue.add(new CircularQueue(N));
 		
-		for(int p = 1; p <= maxPowerOf10;p*=10){
+		if(trace){
+			System.out.printf("Starting Pass %d\n",pass++);
+			for(int i = 0; i < N;i++){
+				System.out.printf("%6d ",i);
+			}System.out.println();
+			for(int i = 0; i < N;i++){
+				System.out.printf("%6d ",list[i]);
+			}System.out.println();
+			System.out.println();
+		}
+		for(int p = 1; p <= maxPowerOf10 && N != 0;p*=10){
 			for(int i = 0; i < N;i++){
 				// negative numbers
 				if(list[i] < 0){
@@ -67,13 +77,28 @@ public class Test {
 					list[index++] = (Integer) queue.get(i).dequeue();
 				}
 			}
+			// prints out elements contained within the list
 			if(trace){
+				System.out.printf("Pass %d\n",pass++);
 				for(int i = 0; i < N;i++){
-					System.out.printf("%d ",list[i]);
+					System.out.printf("%6d ",i);
 				}System.out.println();
+				for(int i = 0; i < N;i++){
+					System.out.printf("%6d ",list[i]);
+				}System.out.println();
+				System.out.println();
 			}
 		}
-		
+		if(trace){
+			System.out.printf("Final Pass %d\n",--pass);
+			for(int i = 0; i < N;i++){
+				System.out.printf("%6d ",i);
+			}System.out.println();
+			for(int i = 0; i < N;i++){
+				System.out.printf("%6d ",list[i]);
+			}System.out.println();
+			System.out.println();
+		}
 	}
 }
 
