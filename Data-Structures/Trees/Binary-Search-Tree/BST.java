@@ -1,11 +1,13 @@
 /** Name: William Granados
- *  Date: 09/11/14
+ *  Date: 18/01/15
  *  Purpose: Creates a generic bst
  * */
 class BST<T extends Comparable<T> > {
 	
 	public Node<T> root;
 	
+	/**Inserts a node into the binary search tree. Does this through iteration.
+	 * @param node node to be inserted*/
 	public void insert(Node<T>node){
 		// we are creating a tree
 		if(this.root == null)
@@ -34,6 +36,8 @@ class BST<T extends Comparable<T> > {
 		}
 		
 	}
+	/**Inserts a value into the binary search tree. Does this through iteration.
+	 * @param value value to be inserted*/
 	public void insert(T value){
 		// we are initializing the tree
 		if(this.root == null)
@@ -94,7 +98,8 @@ class BST<T extends Comparable<T> > {
 		// if we've added a value return true, other return the node that was given
 		return (current.left.value == node.value || current.right.value == node.value) ? current:n;
 	}
-	
+	/**Deletes a value in the binary search tree. Does this through iteration.
+	 * @param value value to be deleted*/
 	public void delete(T value){
 		
 		if(this.root.value.compareTo(value) == 0){
@@ -207,20 +212,20 @@ class BST<T extends Comparable<T> > {
 		}
 		
 	}
-	
+	/**Checks if a given value is within the binary search tree
+	 * @param value value to be searched for*/
 	public boolean contains(T value){
-		Node<T>current = root;
-		Node<T>node = new Node<T>(value);
+		Node<T>current = this.root;
 		while(true){
-			if(node.value.compareTo(current.value) < 0){
+			if(value.compareTo(current.value) < 0){
 				if(current.left != null)
 					current = current.left;
 				else
 					break;
 			}
-			else if(node.value.compareTo(current.value) == 0)
+			else if(value.compareTo(current.value) == 0)
 				return true;
-			else if(node.value.compareTo(current.value) > 0){
+			else if(value.compareTo(current.value) > 0){
 				if(current.right != null)
 					current = current.right;
 				else
@@ -231,24 +236,23 @@ class BST<T extends Comparable<T> > {
 	}
 	@SuppressWarnings("unused")
 	private boolean contains(Node<T> n, T value){
-		Node<T>current = root;
-		Node<T>node = new Node<T>(value);
-		while(current.value.compareTo(n.value) != 0){
-			if(current.value.compareTo(n.value) < 0)
+		Node<T>current = this.root;
+		while(n.value.compareTo(current.value) != 0){
+			if(n.value.compareTo(current.value) < 0)
 				current = current.left;
 			else
 				current = current.right;
 		}
 		while(true){
-			if(node.value.compareTo(current.value) < 0){
+			if(value.compareTo(current.value) < 0){
 				if(current.left != null)
 					current = current.left;
 				else
 					break;
 			}
-			else if(node.value.compareTo(current.value) == 0)
+			else if(value.compareTo(current.value) == 0)
 				return true;
-			else if(node.value.compareTo(current.value) > 0){
+			else if(value.compareTo(current.value) > 0){
 				if(current.right != null)
 					current = current.right;
 				else
@@ -258,7 +262,8 @@ class BST<T extends Comparable<T> > {
 		return false;
 	}
 	
-
+	/**Finds the minimum value in a subtree
+	 * @param n root of subtree*/
 	public Node<T> min(Node<T>n){
 		Node<T>current = this.root;
 		while(n.value.compareTo(current.value) != 0){
@@ -272,6 +277,8 @@ class BST<T extends Comparable<T> > {
 		}
 		return current;
 	}
+	/**Finds the maximum value in a subtree
+	 * @param n root of subtree*/
 	public Node<T> max(Node<T>n){
 		Node<T>current = this.root;
 		while(n.value.compareTo(current.value) != 0){
@@ -285,7 +292,9 @@ class BST<T extends Comparable<T> > {
 		}
 		return current;
 	}
-
+	
+	/**Prints the pre-order traversal of a subtree
+	 * @param current head of subtree*/
 	public void preOrder(Node<T>current){
 		System.out.print(current.value + " ");
 		if(current.left != null)
@@ -293,6 +302,8 @@ class BST<T extends Comparable<T> > {
 		if(current.right != null)
 			preOrder(current.right);
 	}
+	/**Prints the in-order traversal of a subtree
+	 * @param current head of subtree*/
 	public void inOrder(Node<T>current){
 		if(current.left != null)
 			inOrder(current.left);
@@ -300,6 +311,8 @@ class BST<T extends Comparable<T> > {
 		if(current.right != null)
 			inOrder(current.right);
 	}
+	/**Prints the post-order traversal of a subtree
+	 * @param current head of subtree*/
 	public void postOrder(Node<T>current){
 		if(current.left != null)
 			postOrder(current.left);
