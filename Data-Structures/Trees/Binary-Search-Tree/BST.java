@@ -287,7 +287,7 @@ class BST<T extends Comparable<T> > {
 	}
 
 	public void preOrder(Node<T>current){
-		System.out.println(current.value);
+		System.out.print(current.value + " ");
 		if(current.left != null)
 			preOrder(current.left);
 		if(current.right != null)
@@ -305,7 +305,7 @@ class BST<T extends Comparable<T> > {
 			postOrder(current.left);
 		if(current.right != null)
 			postOrder(current.right);
-		System.out.println(current.value);
+		System.out.println(current.value + " ");
 	}
 	
 }
