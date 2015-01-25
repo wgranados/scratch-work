@@ -1,4 +1,4 @@
 Class-work
 ==========
 
-Just some fun assignments that were assigned.
+This repository contains some assignments that were assigned in class.
