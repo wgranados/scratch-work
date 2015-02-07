@@ -17,7 +17,7 @@ struct edge{
     }
 };
 
-const int MAXN = 100, INF = 0x3F3F3F3F;
+const int MAXN = 100;
 int T,N,C;
 bool visited[MAXN];
 vector< pair<int,int> >adj[MAXN];
