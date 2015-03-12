@@ -1,68 +1,104 @@
-/*Problem description: http://wcipeg.com/problems/desc/segtree*/
+/*Problem Description: http://www.dmoj.ca/problem/ds3*/
 #include<iostream>
 #include<cstdio>
-#include<vector>
 #include<algorithm>
-#define MAXN 100000
-#define MAX_INT (int)1e7
 using namespace std;
 
-vector<int> tree(4*MAXN),arr(MAXN);
-int N,Q;
-int qlo,qhi,index;
+const int MAXN = (int)1e5+1,inf = (int)1e9+1;
+int N,M,Q,a,b,qlo,qhi,idx;
+int A[MAXN],TM[4*MAXN],TGCD[4*MAXN];
+char cmd;
 
-void make_tree(int lo, int hi, int x){
+int gcd(int X, int Y) {
+    int tmp;
+    while (X != Y && Y != 0) {
+        tmp = X;
+        X = Y;
+        Y = tmp % Y;
+    }
+    return X;
+}
+
+void build(int n,int lo,int hi){
     if(lo == hi){
-        tree[x] = arr[lo];
+        TM[n]   = A[lo];
+        TGCD[n] = A[lo];
     }
     else{
-        make_tree(lo, (lo+hi)/2, 2*x+1);
-        make_tree((lo+hi)/2+1, hi, 2*x+2);
-        tree[x] = min(tree[2*x+1],tree[2*x+2]);
+        build(2*n+1,lo,(lo+hi)/2);
+        build(2*n+2,(lo+hi)/2+1,hi);
+        TM[n]   = min(TM[2*n+1],TM[2*n+2]);
+        TGCD[n] = gcd(TGCD[2*n+1],TGCD[2*n+2]);
     }
 }
 
-int query(int lo, int hi, int x){
-    if( lo >= qlo && hi <= qhi)
-        return tree[x];
-    else if( (lo <= qlo && hi <= qhi && hi >= qlo) || (lo >= qlo && lo <= qhi) || (lo <= qlo && hi >= qhi)){
-        int a1 = query(lo,(lo+hi)/2,2*x+1);
-        int a2 = query( (lo+hi)/2+1,hi,2*x+2);
-        return min(a1,a2);
-    }
+int queryM(int n,int lo,int hi){
+    if(lo > qhi || hi < qlo)
+        return inf;
+    else if(lo >= qlo && hi <= qhi)
+        return TM[n];
     else
-        return MAX_INT;
+        return min(queryM(2*n+1,lo,(lo+hi)/2),queryM(2*n+2,(lo+hi)/2+1,hi));
 }
-void update(int lo, int hi,int x){
-    if(index <= hi && index >= lo){
+
+int queryGCD(int n,int lo,int hi){
+    if(lo > qhi || hi < qlo)
+        return 0;
+    else if(lo >= qlo && hi <= qhi)
+        return TGCD[n];
+    else
+        return gcd(queryGCD(2*n+1,lo,(lo+hi)/2),queryGCD(2*n+2,(lo+hi)/2+1,hi));
+}
+
+int queryQ(int n,int lo,int hi){
+    if(lo > qhi || hi < qlo || queryGCD(n,lo,hi)!=Q)
+        return 0;
+    else if(lo == hi)
+        return (A[lo] == Q) ? 1:0;
+    else
+        return queryQ(2*n+1,lo,(lo+hi)/2)+queryQ(2*n+2,(lo+hi)/2+1,hi);
+}
+
+void update(int n,int lo,int hi){
+    if(idx >= lo && idx <= hi){
         if(lo == hi){
-            tree[x] = arr[lo];
+            TM[n]   = A[lo];
+            TGCD[n] = A[lo];
         }
         else{
-            update(lo,(lo+hi)/2,2*x+1);
-            update((lo+hi)/2+1,hi,2*x+2);
-            tree[x] = min(tree[2*x+1],tree[2*x+2]);
+            update(2*n+1,lo,(lo+hi)/2);
+            update(2*n+2,(lo+hi)/2+1,hi);
+            TM[n]   = min(TM[2*n+1],TM[2*n+2]);
+            TGCD[n] = gcd(TGCD[2*n+1],TGCD[2*n+2]);
         }
     }
 }
 int main(){
-    scanf("%d%d",&N,&Q);
-    fill(tree.begin(),tree.end(),MAX_INT);
-    for(int i = 0; i < N;++i)
-        scanf("%d",&arr[i]);
-    make_tree(0,N-1,0);
-    int a,b;
-    char cmd;
-    for(int i = 0; i < Q;++i){
+    //freopen("input.txt","r",stdin);
+    scanf("%d%d",&N,&M);N--,M--;
+    for(int i = 0;i <= N;i++){
+        scanf("%d",&A[i]);
+    }
+    build(0,0,N);
+    for(int i = 0;i <= M;i++){
         scanf(" %c%d%d",&cmd,&a,&b);
-        if(cmd == 'Q'){
-            qlo = a, qhi = b;
-            printf("%d\n",query(0,N-1,0));
+        if(cmd == 'M'){
+            qlo = --a,qhi = --b;
+            printf("%d\n",queryM(0,0,N));
+        }
+        else if(cmd == 'G'){
+            qlo = --a,qhi = --b;
+            printf("%d\n",queryGCD(0,0,N));
+        }
+        else if(cmd == 'Q'){
+            qlo = --a,qhi = --b;
+            Q = queryGCD(0,0,N);
+            printf("%d\n",queryQ(0,0,N));
         }
         else{
-            index = a;
-            arr[a] = b;
-            update(0,N-1,0);
+            A[--a]=b;
+            idx = a;
+            update(0,0,N);
         }
     }
     return 0;
