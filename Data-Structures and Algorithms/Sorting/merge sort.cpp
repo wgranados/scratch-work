@@ -4,7 +4,7 @@
 #include <algorithm>
 using namespace std;
 
-int N,a_i;
+int N,a_i,swaps;
 vector<int> arr;
 
 vector<int> merge(vector<int>&left, vector<int>&right){
@@ -13,6 +13,7 @@ vector<int> merge(vector<int>&left, vector<int>&right){
         if(left[0] < right[0]){
             new_list.push_back(left[0]);
             left.erase(left.begin());
+            swaps++;
         }
         else{
             new_list.push_back(right[0]);
@@ -45,9 +46,7 @@ int main(){
         arr.push_back(a_i);
     }
     arr = merge_sort(arr);
-    //sort(arr.begin(),arr.end());
-    for(int i = 0; i < N;i++){
+    for(int i = 0; i < N;i++)
         printf("%d\n",arr[i]);
-    }
     return 0;
 }
