@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename Java project &apos;LinkedList&apos; to &apos;Data Structures&apos;&#x0D;&#x0A;- Original element: &apos;LinkedList&apos;&#x0D;&#x0A;- Renamed element: &apos;LinkedList&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename Java project &apos;LinkedList&apos;" flags="7" id="org.eclipse.jdt.ui.rename.java.project" input="=LinkedList" name="Data Structures" references="true" stamp="1417324085565" version="1.0"/>
+</session>

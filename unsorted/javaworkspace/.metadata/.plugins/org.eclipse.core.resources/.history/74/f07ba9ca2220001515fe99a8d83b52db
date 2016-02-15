@@ -1,0 +1,8 @@
+import com.google.api.translate.Language;
+import com.google.api.translate.Translate;
+
+public class Main {
+	public static void main(String[]args){
+		
+	}
+}

@@ -1,0 +1,11 @@
+/** Name: William Granados
+ *  Date: 09/11/14
+ *  Purpose: Creates a generic node
+ * */
+public class Node< T extends Comparable<T> > {
+	public T value;
+	public Node<T> left,right;
+	public Node(T value){
+		this.value = value;
+	}
+}

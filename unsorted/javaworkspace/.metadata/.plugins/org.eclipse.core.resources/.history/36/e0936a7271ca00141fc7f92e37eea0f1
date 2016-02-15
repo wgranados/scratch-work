@@ -1,0 +1,15 @@
+
+
+public class Pair<F extends Comparable<F>,S extends Comparable<S>> implements Comparable<Pair>{
+	F first;
+	S second;
+	public Pair(F first, S second){
+		this.first = first;
+		this.second = second;
+	}
+	@Override
+	public int compareTo(Pair<F,S> arg0) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+}

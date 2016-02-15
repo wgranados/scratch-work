@@ -1,0 +1,8 @@
+
+public class Main {
+	static Database database = new Database();
+	public static void main(String[]args){
+		database.print(2);
+		System.out.println(database.exactQuery("answering machine"));
+	}
+}

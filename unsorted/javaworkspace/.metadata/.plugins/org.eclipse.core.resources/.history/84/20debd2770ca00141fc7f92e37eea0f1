@@ -1,0 +1,8 @@
+
+public class Main {
+	static Database database = new Database();
+	public static void main(String[]args){
+		System.out.println("test");
+		database.query("test");
+	}
+}

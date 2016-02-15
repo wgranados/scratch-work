@@ -1,0 +1,333 @@
+adbusters
+ads
+aerosol
+aerosol can-empty
+alcohol bottles
+aluminum
+aluminum plate
+aluminum tray
+aluminum water bottle
+antifreeze container (empty)
+appliance boxes
+aseptic
+aseptic box
+baby food jar
+bags
+bakery
+barbeque sauce
+beer bottle (can)
+beer cans
+berry container
+beverages
+biscuit tin
+bleach
+blister pack
+blister packaging
+books
+bottles
+boxboard
+boxes
+bristol board / construction paper
+buckets
+buisness
+burner liner
+cake container
+calendar
+calling
+can
+candidate
+cans
+car coolant
+carboy
+card stock
+cardboard - unwaxed
+cardboard barrel
+cardboard box
+cardboard carton
+cardboard-large quantiy
+cards
+cartons
+cash receipt
+catalogue
+catalogues
+cd cases dvd cases
+cereal box
+cigarette package
+clam shell
+clamshell
+clear packaging
+clear plastic dip container
+clear plastic hummus container
+clear plastic prescription or pill bottle
+clear plastic tub
+clear produce container
+coated paper
+coffee can
+coffee sleeve
+cold cup drink
+coloured
+compressed air
+computer paper
+condiments
+confidential documents
+construction paper
+container
+containers
+cookie tin
+coolant
+corrugated fibreboard
+cosmetic bottle
+cottage cheese tub
+covers
+cup (plastic)
+cups
+dental floss box
+detergent bottle
+detergent box
+disposable
+drums
+dvd case
+edge notched
+edge-notched
+egg carton
+election sign
+envelope
+envelope-with or without plastic window
+fax paper
+ferraro rocher container
+ferrero rocher container
+fiberboard
+file folder
+files
+fine paper
+flyer
+flyers
+foam egg carton
+foam trays
+foil
+food
+food can
+food tub
+frozen juice container
+fruit container
+fruit cup
+gable top
+gift
+gift box
+gift card
+gift wrapping paper (non-metallic)
+glass bottle/glass jar
+glass jar
+glass prescription bottle or vitamin bottle
+globe
+glossy
+greeting card
+groceries
+grocery bag
+hairspray
+hard cover
+hardcover book
+hdpe
+home brewing bottle
+hot drink cups
+household paper
+index card
+index cards
+inserts
+jar
+jars
+jugs
+juice box and other aseptic containers
+junk mail
+ketchup
+kleenex box
+kleenx box
+laundry
+lid
+lids
+liquor bottle
+lottery tickets
+magazine
+magazines
+margarine
+margarine tub
+mason jar
+mayonnaise
+meat tray
+medication container
+medicine
+medicine bottle
+metal
+metal water bottle
+milk carton
+mixed plastics
+moisturizer
+molded paper
+mousse
+mustard
+news
+newspapers
+newsprint
+non-addressed mail
+novel
+occ
+old corrugated cardboard
+packaging
+packing paper
+pails
+paint
+paint can (empty)
+paper
+paper berry box
+paper egg carton
+paper gift bag/box (ropes and gromets removed, non metallic)
+paper roll
+paper stock
+paper towel
+paper tube
+paperback book
+paperboard
+perfume bottle
+pet
+pete
+pete #1 clamshell
+phone book
+picture postcard
+pie plate
+pizza box empty- no food residue or plastics
+plastic
+plastic bags
+plastic beverage container
+plastic bottle
+plastic bottles
+plastic carboy
+plastic cookie and cracker bag tray
+plastic cutlery
+plastic food container
+plastic food tub
+plastic food tub lid
+plastic fork
+plastic handcream tube
+plastic ice cream containers
+plastic ice cream tub
+plastic jar
+plastic jars
+plastic jug
+plastic knife
+plastic lids
+plastic pail (five litres or less in size)
+plastic plates and cups
+plastic produce container
+plastic shopping bag
+plastic soap bottle
+plastic spoon
+plastic tub
+plastic tube
+plastic tubes
+plastic water bottle
+plastics
+plates
+polycoat
+polyethylene
+polystyrene
+polystyrene containers
+polystyrene foam cup and plate
+polystyrene foam packaging
+pop bottle
+pop can
+post card
+post-it
+postcard
+postcards
+posterboard
+posters (unlaminated)
+potato chip container
+pringles
+print
+printed
+printed paper
+printing
+protective
+pudding cup
+retail bag
+rigid
+rigid foil
+rigid polystyrene cup
+roasting
+roasting pan
+rolls
+roofing tar container (empty)
+roofing tar metal pail (empty)
+salad
+salad dressing
+sales receipt
+sauce can
+shampoo bottle
+shaving cream can
+shoe box
+shredded papers
+small
+soda
+soda can
+soda cracker box
+soft cover
+soup can
+sour cream tub
+soya sauce
+spiral cans
+spirits
+spray
+sprout
+squeezable food bottle
+stainless steel bottle
+star
+steel can
+steel can (soup and other)
+stickies
+sticky note
+strawberry
+styrofoam
+sun
+take out
+take out food container (plastic)
+take-out
+take-out tray
+takeout
+takeout coffee cup (styrofoam)
+telephone directory book
+tetra pak
+tetrapack
+tetrapak
+thermoform
+tide
+tin
+tins
+tissue box
+tissue paper
+tissue wrapping paper
+toilet paper
+toilet paper tube
+tomato
+tops
+tray
+tubs
+vial
+vitamin bottle
+water bottle
+water cooler bottle
+white (granulated) sugar bag
+white (or other colour) plastic prescription or pill bottle (empty)
+white sugar bags
+wide mouth
+windshield washer fluid bottle
+wine bottle
+wine making bottle
+wrap
+wrapping
+writing paper
+yoghurt
+yogourt
+yogurt
+yogurt cup (single serve)
+yogurt tub
+yougurt

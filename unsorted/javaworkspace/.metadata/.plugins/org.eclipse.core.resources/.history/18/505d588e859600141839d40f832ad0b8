@@ -1,0 +1,20 @@
+
+public class Test {
+	
+	public static void main(String[]args){
+		Tree<Integer> tree = new Tree<Integer>();
+		tree.insert2(15);
+		tree.insert2(5);
+		tree.insert2(6);
+		tree.insert2(3);
+		tree.insert2(12);
+		tree.insert2(20);
+		tree.insert2(10);
+		tree.insert2(13);
+		tree.insert2(18);
+		tree.insert2(23);
+		tree.insert2(6);
+		tree.insert2(7);
+		tree.inOrder(tree.root);
+	}
+}
