@@ -50,10 +50,6 @@ class spivak : public Book
             this->pages = 1;
 	}
     public:
-	string getAuthor()
-	{
-	    return "what is going on!?";
-	}
 	string random()
 	{
             return "not hello";
