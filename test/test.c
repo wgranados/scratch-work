@@ -10,10 +10,17 @@ int main(void)
     int file_directory = open("input.txt", O_RDONLY); 
     printf("%d\n", file_directory);
 
+    // now we're reading in the input, in this case I'm reading in from a file
+    // that looks some like this:
+    // test
+    // test
+    
+    // so for the first file, I just read in 10 bits
     char buffer[10];
     int sz = read(file_directory,buffer,10);
     printf("sz represents the amount of bytes there were read %d\n",sz); 
     buffer[sz] = '\0';
+    // from this we can see that it does infact read in the newline character
     for(int i = 0;i < sz;i++)
     {
         printf("%c", buffer[i]);
