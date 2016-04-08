@@ -23,12 +23,13 @@ int main()
     freopen("primes.txt","r",stdin);
     freopen("output.txt","w",stdout);
     int prime = 0;
-    while(cin >> prime)
+    int cnt = 0;
+    while(cin >> prime && cnt != 3)
     {
         if(inequality_holds(prime))
         {
+            cnt++;
             cout << prime << endl;
-            break;
         }
     }
     fclose(stdin);
