@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workingSetManager>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1430779728773_2" label="CCC12 Stage 2" name="CCC12 Stage 2"/>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1430779753282_3" label="CCC12 Stage2" name="CCC12 Stage2">
+<item elementID="=appcompat_v7" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+</workingSet>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1387336960386_0" label="Window Working Set" name="Aggregate for window 1387336960386"/>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1402349443723_1" label="Window Working Set" name="Aggregate for window 1402349443723"/>
+<mruList name="CCC12 Stage 2"/>
+</workingSetManager>

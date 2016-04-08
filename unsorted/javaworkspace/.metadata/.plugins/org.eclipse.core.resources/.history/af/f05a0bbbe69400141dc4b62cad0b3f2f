@@ -1,0 +1,53 @@
+/** Name: William Granados
+ *  Date: 09/11/14
+ *  Purpose: Creates a generic bst
+ * */
+public class Tree<T extends Comparable<T> > {
+	
+	public Node<T> root;
+	public int height;
+	
+	public Tree(){}
+	
+	public void insert(Node<T>node){
+		
+		if(this.root == null){
+			node = root;
+			return;
+		}
+		else{
+			Node<T>current = root;
+			while(true){
+				if(current.value.compareTo(node.value) <= 0){
+					if(current.left == null){
+						current.left = node;
+						break;
+					}
+					else if(current.right == null){
+						current.right = node;
+						break;
+					}
+					else
+						current = current.left;
+				}
+				else{
+					if(current.left == null){
+						current.left = node;
+						break;
+					}
+					else if(current.right == null){
+						current.right = node;
+						break;
+					}
+					else
+						current = current.right;
+				}	
+			}
+		}
+		
+	}
+
+	public void preOrder(){
+		
+	}
+}

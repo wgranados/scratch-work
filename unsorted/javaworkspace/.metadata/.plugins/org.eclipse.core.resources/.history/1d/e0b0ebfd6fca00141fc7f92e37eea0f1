@@ -1,0 +1,7 @@
+
+public class Main {
+	Database database = new Database();
+	public static void main(String[]args){
+	
+	}
+}

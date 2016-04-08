@@ -1,0 +1,10 @@
+import com.google.api.translate.Language;
+import com.google.api.translate.Translate;
+
+public class Main {
+	public static void main(String[]args) throws Exception{
+		String translatedText = Translate.DEFAULT.execute("Bonjour le monde", Language.FRENCH, Language.ENGLISH);
+	    System.out.println(translatedText);
+
+	}
+}

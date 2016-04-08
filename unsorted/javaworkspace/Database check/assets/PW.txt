@@ -1,0 +1,89 @@
+aluminum siding
+ammunition
+asbestos
+asphalt
+billiard
+boat
+bricks
+bullets
+bus
+car parts (plastic)
+carcas
+cast iron tub
+cement
+cement powder
+cinder block
+clay pipe
+concrete block
+concrete laundry tub
+concrete laundry tubs
+concrete pieces
+concrete sink
+concrete tub
+corpse
+cue
+dead animal
+dirt or sod
+diving board
+ebike
+electric bike
+fill
+firecrackers
+fireworks
+flares
+grass
+grass clippings
+grout
+heater
+hot tub
+illuminations
+insulation
+jet ski
+marble slab
+mortar
+motorcycle
+motorized personal transporters
+oil tank
+paving / patio stones
+pcb
+pcbs
+piano or organ
+pickup truck cabs
+piece of concrete
+pool heater
+pool pump
+pool table
+projectiles
+pump
+pyrotechnic
+pyrotechnics
+remains
+road flares
+rockets
+rocks and gravel
+sand
+scooter
+sea-doo
+segway
+shells
+shrapnel
+ski-doo
+snooker
+snow mobile
+snowmobile
+soil
+sparklers
+stucco
+stumps and large branches
+taxi
+telephone pole
+tent trailer
+thatch
+tree
+tree trunk
+truck cabs
+truck caps
+truck toppers
+vehicle propane tank
+vending machine
+vinyl siding

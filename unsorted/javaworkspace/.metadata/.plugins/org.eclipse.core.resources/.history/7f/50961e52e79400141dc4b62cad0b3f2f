@@ -1,0 +1,101 @@
+/** Name: William Granados
+ *  Date: 09/11/14
+ *  Purpose: Creates a generic bst
+ * */
+public class Tree<T extends Comparable<T> > {
+	
+	public Node<T> root;
+	public int height;
+	
+	public Tree(){}
+	
+	public void insert(Node<T>node){
+		
+		if(this.root == null){
+			node = root;
+			return;
+		}
+		else{
+			Node<T>current = root;
+			while(true){
+				if(current.value.compareTo(node.value) <= 0){
+					if(current.left == null){
+						current.left = node;
+						break;
+					}
+					else if(current.right == null){
+						current.right = node;
+						break;
+					}
+					else
+						current = current.left;
+				}
+				else{
+					if(current.left == null){
+						current.left = node;
+						break;
+					}
+					else if(current.right == null){
+						current.right = node;
+						break;
+					}
+					else
+						current = current.right;
+				}	
+			}
+		}
+		
+	}
+	public void insert(T val){
+		Node<T>node = new Node<T>(val);
+		if(this.root == null){
+			node = root;
+			return;
+		}
+		else{
+			Node<T>current = root;
+			while(true){
+				if(current.value.compareTo(node.value) <= 0){
+					if(current.left == null){
+						current.left = node;
+						break;
+					}
+					else if(current.right == null){
+						current.right = node;
+						break;
+					}
+					else
+						current = current.left;
+				}
+				else{
+					if(current.left == null){
+						current.left = node;
+						break;
+					}
+					else if(current.right == null){
+						current.right = node;
+						break;
+					}
+					else
+						current = current.right;
+				}	
+			}
+		}
+		
+	}
+
+	public void preOrder(Node<T>current){
+		System.out.println(current.value);
+		if(current.left != null)
+			preOrder(current.left);
+		if(current.right != null)
+			preOrder(current.right);
+	}
+	public void inOrder(Node<T>current){
+			
+		}
+	public void postOrder(){
+		
+	}
+	
+}

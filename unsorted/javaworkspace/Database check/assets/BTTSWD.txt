@@ -1,0 +1,95 @@
+aluminum door
+automobile
+automotive
+awning
+baseboards
+bath tub
+bathroom
+bathtub (non metal)
+c & d wastes
+car part (metal)
+car seat
+car tire
+ceiling tile
+ceiling tiles
+ceramic
+construction
+counter top
+countertop
+demolition
+diesel
+door- wooden
+door-glass/patio/shower
+door-metal
+down spout
+downspout
+dry wall
+drywall (clean; painted, vinyl or paper covered only)
+ductile foam sheet
+ductile foam sheets
+eaves trough
+eavestrough
+fencing
+fiberglass
+fiberglass stall
+fibre-glass
+fibreglass
+floor tiles
+folding wooden door
+gas
+gazebo
+gyp rock
+hot tub
+hot tub cover
+insert
+insulation
+jacuzzi
+kitchen
+kitchen cabinet
+kitchen cupboard
+laundry sink
+laundry tub
+lawn mower
+lawn tractor
+lawnmower (ride on)
+liner
+lumber, wood
+metal garage door
+metal shower enclosure (dismantled)
+muffler
+oil tank
+parquet flooring
+pink fibre glass
+plaster
+plywood
+pool
+pool cover
+pool tarp
+porcelain
+pressure treated wood
+quarter rounds
+railway ties
+ride on lawnmower
+saw dust
+sawdust
+screen door
+shingles
+shower walls
+shower-dismantled
+sinks-non-metal
+skid
+slate
+small truck tire
+tiles
+tire
+tires
+tub
+tyres
+vanity (non-metal)
+vehicle  tank (empty)
+window frame
+window glass
+window shutter
+wood flooring
+wood panelling
+wooden garage door

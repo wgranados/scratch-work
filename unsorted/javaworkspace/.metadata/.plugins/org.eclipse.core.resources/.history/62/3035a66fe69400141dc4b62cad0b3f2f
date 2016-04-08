@@ -1,0 +1,5 @@
+
+public class Test {
+	Tree<Integer> tree = new Tree<Integer>();
+	tree.insert(new Node<Integer>(5));
+}
