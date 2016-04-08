@@ -4,18 +4,21 @@ using std::cin;
 using std::endl;
 using std::cout;
 
-bool inequality_holds(int prime)
+/* This function calculates (ab)%c */
+int modulo(int a,int b,int c)
 {
-    // check if the inequality, a^(p-1) = 1 mod(p^2), where a < p
-    int ret = 1;
-    // use modluar arithmetic to avoid integer overflow
-    for(int i = 1;i <= prime-1;i++)
+    // long long is taken to avoid overflow of intermediate results
+    long long x=1,y=a;
+    while(b > 0)
     {
-        ret *= 2; // let a = 2
-        ret %= prime*prime;
+        if(b%2 == 1)
+        {
+            x=(x*y)%c;
+        }
+        y = (y*y)%c; // squaring the base
+        b /= 2;
     }
-    ret %= prime*prime;
-    return (ret == 1);
+    return x%c;
 }
 
 int main()
@@ -24,9 +27,9 @@ int main()
     freopen("output.txt","w",stdout);
     int prime = 0;
     int cnt = 0;
-    while(cin >> prime && cnt != 3)
+    while(cin >> prime)
     {
-        if(inequality_holds(prime))
+        if(modulo(2, prime-1, prime*prime) == 1)
         {
             cnt++;
             cout << prime << endl;
