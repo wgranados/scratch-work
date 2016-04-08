@@ -4,7 +4,7 @@ using std::cin;
 using std::endl;
 using std::cout;
 
-/* This function calculates (ab)%c */
+/* This function calculates (a^b)%c */
 int modulo(int a,int b,int c)
 {
     // long long is taken to avoid overflow of intermediate results
@@ -26,12 +26,10 @@ int main()
     freopen("primes.txt","r",stdin);
     freopen("output.txt","w",stdout);
     int prime = 0;
-    int cnt = 0;
     while(cin >> prime)
     {
         if(modulo(2, prime-1, prime*prime) == 1)
         {
-            cnt++;
             cout << prime << endl;
         }
     }
