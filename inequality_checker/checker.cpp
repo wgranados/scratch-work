@@ -21,6 +21,7 @@ bool inequality_holds(int prime)
 int main()
 {
     freopen("primes.txt","r",stdin);
+    freopen("output.txt","w",stdout);
     int prime = 0;
     while(cin >> prime)
     {
@@ -30,5 +31,7 @@ int main()
             break;
         }
     }
+    fclose(stdin);
+    fclose(stdout);
     return 0;
 }
